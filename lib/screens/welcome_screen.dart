@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '';
 import '../widgets/my_button.dart';
+import 'registration_screen.dart';
+
 class welcomeScreen extends StatefulWidget {
   const welcomeScreen({super.key});
 
@@ -17,7 +19,6 @@ class _welcomeScreenState extends State<welcomeScreen> {
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
-          //Hi I am Hadeel. Does this work?
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
