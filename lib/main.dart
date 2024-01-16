@@ -1,21 +1,29 @@
-import 'package:chat_app/screens/registration_screen.dart';
+import 'package:chat_app/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
-import 'screens/welcome_screen.dart';
-import 'screens/registration_screen.dart';
-void main() => runApp(myApp());
+import 'Screens/welcome_screen.dart';
+import 'Screens/chat_screen.dart';
+import 'Screens/registration_screen.dart';
+import 'Screens/signin_screen.dart';
 
-class myApp extends StatelessWidget {
-  const myApp({super.key});
+void main()=>runApp(Myapp());
+class Myapp extends StatelessWidget {
+  const Myapp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Message App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const RegistrationScreen(),
+      title: 'Massage App',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      // home:ChatScreen(),
+      initialRoute: 'welcome_screen',
+      routes: {
+        'welcome_screen':(context) => WelcomeScreen(),
+        'signin_screen':(context) => SignInScreen(),
+        'registration_screen':(context) => RegistrationScreen(),
+        'chat_screen':(context) => ChatScreen(),
+
+      },
     );
   }
 }

@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import '';
 import '../widgets/my_button.dart';
 import 'registration_screen.dart';
+import 'signin_screen.dart';
 
-class welcomeScreen extends StatefulWidget {
-  const welcomeScreen({super.key});
+class WelcomeScreen extends StatefulWidget {
+  const WelcomeScreen({super.key});
 
   @override
-  State<welcomeScreen> createState() => _welcomeScreenState();
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
 }
 
-class _welcomeScreenState extends State<welcomeScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
