@@ -17,6 +17,7 @@ class _welcomeScreenState extends State<welcomeScreen> {
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
+          //Hi I am Hadeel. Does this work?
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
