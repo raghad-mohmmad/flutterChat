@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Widgets/My_Button.dart';
-
+import '../Screens/registration_screen.dart';
+import '../Screens/welcome_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
