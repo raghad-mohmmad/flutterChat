@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import '';
-import '../widgets/my_button.dart';
-import 'registration_screen.dart';
-import 'signin_screen.dart';
+import '../screens/signin_screen.dart';
+import '../screens/registration_screen.dart';
+import '../Widgets/My_Button.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({super.key});
+  static  const String screenRoute='welcome_screen';
+
+
+  const WelcomeScreen({Key? key}) : super(key: key);
+
 
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
+  _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
@@ -16,8 +19,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body:
-      Padding(
+      body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -27,28 +29,37 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               children: [
                 Container(
                   height: 180,
-                  child: Image.asset('images/logo.png')
+                  child: Image.asset('images/logo.png'),
                 ),
-               const Text('messageMe',
+                Text(
+                  'MessageMe',
                   style: TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.w900,
-                      color: Colors.indigo
-                  ),)
+                    fontSize: 40,
+                    fontWeight: FontWeight.w900,
+                    color: Color(0xff2e386b),
+                  ),
+                ),
               ],
             ),
-           const   SizedBox(height: 30,),
-             MyButton(
-               color: Colors.yellow[900]!,
-               title: 'Sign in',
-               onPressed: (){},
-             ),
-            MyButton(color: Colors.blue[800]!, title: 'register', onPressed:(){})
+            SizedBox(height: 30),
+            MyButton(
+              color: Colors.yellow[900]!,
+              title: 'Sign in',
+              onPressed: () {
+                Navigator.pushNamed(context,'/signin_screen');
+              },
+            ),
+            MyButton(
+              color: Colors.blue[800]!,
+              title: 'register',
+              onPressed: () {
+                Navigator.pushNamed(context,'/registration_screen');
+
+              },
+            )
           ],
         ),
       ),
     );
   }
 }
-
-

@@ -3,6 +3,7 @@ import '../Widgets/My_Button.dart';
 
 
 class RegistrationScreen extends StatefulWidget {
+  //static const String screenRoute = 'registration_screen';
   const RegistrationScreen({Key? key}) : super(key: key);
 
   @override
